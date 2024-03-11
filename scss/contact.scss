@@ -1,0 +1,171 @@
+@import "navbar";
+@import "footer";
+
+
+$d-font : 'Dancing Script', cursive;
+$b-font :  "Raleway", Helvetica, sans-serif;
+$t-font:'EB Garamond', serif;
+$lato:'Lato', Helvetica, sans-serif;
+$white : white;
+$black: black;
+$green:rgb(13, 147, 151);
+
+
+*{
+ padding:0;
+ margin: 0;
+ box-sizing: border-box;
+}
+
+.container{
+ padding:0;
+ margin:0;
+ width: 100%;
+ font-family: $lato;
+}
+
+main{
+ margin-top: 60px;
+}
+
+
+// title section
+
+.title{
+ font-family: $b-font;
+ background-color: $green;
+ padding: 3rem 1rem;
+ text-align: center;
+ 
+ h3,a{
+  color: white;
+  font-size: 2rem;
+  font-weight: 300;
+  text-decoration: none;
+  transition:0.2s all ease;
+  &:hover{
+    transform: scale(1.1);
+  }
+ }
+}
+
+// Styles for the Contact form
+
+div.contact_info {
+ background-color: rgb(233, 233, 233);
+padding: 3rem 1rem;
+ text-align: center;
+ .container {
+  max-width: 90%;
+  margin: 0 auto;
+   padding: 1rem;
+   font-size: 1.3rem;
+    p{
+ padding: 1.8rem 0;
+ max-width: 80%;
+ margin:0 auto;
+    }
+    a.btn-default {
+     text-decoration: none;
+           border: 2px solid $green;
+           color: $green;
+           font-weight: 800;
+           margin:1rem 0;
+           padding: 0.5rem;
+           &:hover{
+            background-color: $green;
+            color: white;
+           }
+    }
+    p>a{
+      text-decoration: none;
+      color: $green;
+     }
+  }
+}
+
+
+// location Styles
+
+div.location {
+ background-color: rgb(233, 233, 233);
+ text-align: center;
+ padding:4rem 0;
+  >div.container {
+    max-width: 70%;
+    margin:0 auto;
+    iframe{
+     width: 100%;
+    }
+  }
+}
+
+
+// Subscribe seciton
+
+.subscribe{
+ background-color: rgb(21, 139, 139);
+ padding: 3rem 0.5rem;
+ text-align: center;
+ color: white;
+
+ h4{
+   font-size: 2rem;
+   padding: 1rem 0;
+   font-weight: 300;
+ }
+
+ p{
+  margin:0 auto;
+  font-size:1.2rem;
+  max-width: 800px;
+  font-weight: lighter;
+ }
+ .form{
+   padding: 3rem 0;
+   input{
+    display: inline-block;
+    padding: 10px;
+   width:80%;
+   max-width: 80%;
+   }
+
+   button{
+    outline:none;
+    
+    border:1px solid white;
+    padding:10px;
+    background-color: rgb(21, 139, 139);
+    color: white;
+    text-transform: uppercase;
+    transition: 0.1s all ease;
+    max-width:80%;
+    font-weight:500;
+    &:hover{
+     background-color: white;
+     color:rgb(21, 139, 139);
+    }
+
+   }
+ }
+}
+
+@media screen and (max-width:580px){
+ .subscribe{
+  form{
+   input{
+    max-width: 80%;
+   }
+    button{
+     display: block;
+     margin:0.5rem auto;
+     width:100%;
+    }
+  }
+ }
+}
+
+
+
+
+

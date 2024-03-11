@@ -1,0 +1,187 @@
+@import "navbar";
+@import "footer";
+
+
+$d-font : 'Dancing Script', cursive;
+$b-font :  "Raleway", Helvetica, sans-serif;
+$t-font:'EB Garamond', serif;
+$lato:'Lato', Helvetica, sans-serif;
+$white : white;
+$black: black;
+$green:rgb(13, 147, 151);
+
+
+*{
+ padding:0;
+ margin: 0;
+ box-sizing: border-box;
+ 
+}
+
+.container{
+ padding:0;
+ margin:0;
+ width: 100%;
+
+}
+
+main{
+ margin-top: 60px;
+}
+
+
+// title section
+
+.title{
+ font-family: $b-font;
+ background-color: $green;
+ padding: 3rem 1rem;
+ text-align: center;
+ 
+ h3{
+  color: white;
+  font-size: 2rem;
+  font-weight: 300;
+ }
+}
+
+
+//timings section 
+.timings{
+ font-family: "Raleway", Helvetica, sans-serif;
+   background-color: rgb(241, 241, 241);
+   padding:4rem  0.5rem;
+   text-align: center; 
+   margin:auto;
+
+   h3{
+    font-size: 2.4rem;
+    font-weight: 300;
+    color: #333;
+   }
+   
+   .timings__schedule{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 3rem 0;
+      div{
+         font-size: 1.3rem;
+         display: block;
+         padding: 0.5rem 2rem;
+         margin:0 auto;
+         i{
+          color:rgb(19, 170, 163);
+         }
+      }
+
+   }
+}
+
+
+@media screen and (max-width:780px){
+
+ .timings{
+ .timings__schedule{
+  
+  flex-direction: column;
+  text-align: left;
+ }
+}
+}
+
+
+// Styles for the list of events
+
+
+div.events_list {
+   width: 100%;
+   margin:0;
+   padding:0;
+   background-color: rgb(219, 219, 219);
+  >div.event_container {
+     padding: 4rem 0;
+     display: absolute;
+     left: 2rem;
+    >ul {
+     display: block;
+     text-decoration: none;
+     list-style-type: none;
+     margin:0 auto;
+     max-width:60%;
+     
+      >li {
+      font-family: $lato;
+       margin:0 auto;
+       margin-left: 3rem;
+       border-bottom:1px solid rgb(197, 197, 197);
+       padding: 2rem 0;
+      
+        >span.date {
+           background-color: $green;
+           display:block;
+           position:absolute;
+           padding: 1rem ;
+           border-radius: 10px;
+           left:15%;
+           font-size: 1.5rem;
+           color: white;
+          margin: 1rem  -2rem;
+          >strong {
+           color: white;
+          }
+        }
+        >h3 {
+         color: BLACK;
+         padding: 0.5rem 0;
+         font-weight:lighter;
+         font-size: 1.8rem;
+        }
+        >span{
+         color: $green;
+         font-size: 1.4rem;
+        }
+        >p.event_date {
+         font-family: "Raleway", Helvetica, sans-serif;
+           color: rgb(82, 82, 82);
+           font-size: 1.2rem;
+           font-family: bold;
+           padding: 0.5rem 0;
+          >span.event_location {
+            color: rgb(107, 107, 107);
+            padding: 0.5rem 0;
+            display: block;
+          }
+        }
+        >p:nth-of-type(2) {
+           color: rgb(29, 29, 29);
+           padding : 0.5rem 0;  
+        }
+      }
+    }
+  }
+}
+
+
+// Responsiveness 
+
+@media screen and (max-width:468px){
+    div.events_list {
+  >div.event_container {
+    >ul {
+       max-width: 90%;
+       margin-left: 70px;
+       >li{
+       >span.date {
+        position:absolute;
+        left: 5%;
+        margin:1rem -0.5rem;
+        
+       }
+      }
+      }
+    }
+  }
+}
+
+

@@ -1,0 +1,301 @@
+
+@import "navbar";
+@import "footer";
+
+
+$d-font : 'Dancing Script', cursive;
+$b-font :  "Raleway", Helvetica, sans-serif;
+$t-font:'EB Garamond', serif;
+$white : white;
+$black: black;
+$green:rgb(13, 147, 151);
+
+
+*{
+ padding:0;
+ margin: 0;
+ box-sizing: border-box;
+ font-family: $b-font;
+}
+
+.container{
+ padding:0;
+ margin:0;
+ width: 100%;
+}
+
+main{
+  margin-top: 60px;
+ }
+
+.title{
+ background-color: $green;
+ padding: 3rem 1rem;
+ text-align: center;
+ 
+ h3{
+  color: white;
+  font-size: 2rem;
+  font-weight: 300;
+ }
+}
+
+.modal{
+  position: relative;;
+  margin:0;
+  padding: 8rem 2rem;
+  background-color:rgb(219, 219, 219);
+  text-align: center;
+  height:inherit;
+  
+}
+
+
+.modal__inner{
+  width:100%;
+
+  display: flex;
+  flex-wrap:wrap;
+  // justify-content: space-between;
+  align-content: flex-start;
+  margin: 0 auto;
+}
+
+.modal__content{
+  
+   text-align: center;
+   border-radius: 1px;
+   max-width: 23%;
+   margin:0.55rem ;
+   padding: 1rem 2rem;
+   &:hover{
+    background:rgb(238, 237, 237);
+   }
+}
+
+.modal__face{
+ padding: 0;
+ margin:0;
+}
+
+img{
+  width: 75%;
+  
+  border-radius: 50%;
+  height:9.5rem;
+  padding: 6px;
+  transition: 0.3s all ease;
+  background-color: white;
+}
+
+.modal__body h4{
+ padding: 0.5rem 0;
+ font-size: 1.3rem;
+ font-weight: bold;
+ color: #333;
+}
+
+h5{
+  border-top: 2px solid $green;
+ font-size: 0.8rem;
+ color:rgb(85, 84, 84);
+ padding: 0.45rem 0;
+}
+.modal__body i{
+ padding: 0.15rem;
+ color: rgb(110, 110, 110);
+ font-size: 1.4rem;
+}
+
+a{
+ text-decoration: none;
+ i{
+   color: gray;
+ }
+}
+
+.modal__content:hover img{
+ padding:0px;
+ }
+
+
+
+
+// Off canvas modal of officers
+
+
+.off-canvasModal{
+    // display:block;
+    display: none;
+    position: absolute;
+    top:20vh;
+    left: 25%;
+    width: 50%;
+    height: 70%;
+    background-color: rgb(243, 243, 243);
+    padding: 1rem;
+    box-shadow: 0 0 3px 1px lightgrey;
+    .cross__canvas{
+      .cross{
+        float:right;
+        transition: 0.2s all ease;
+        &:hover{
+          transform: scale(1.4);
+        }
+      }
+    }
+}
+
+.canvas__head{
+  display: flex;
+  flex-direction: row;
+  .canvas__image{
+  flex:1 0 30%;
+  text-align: center;
+ img{
+  height: 8rem;
+  width: 120px;
+  }
+ }
+ .canvas_info{
+   flex:1 0 70%;
+   h4{
+     font-size: 1.8rem;
+     padding:1rem 0.5rem;
+     font-weight: lighter;
+   }
+   h5{
+     display: inline;
+     font-size:1.3rem;
+     font-weight:lighter;
+     padding:0.5rem 0.5rem;
+   }
+   i{
+     display: inline;
+     font-size: 1.4rem; 
+   }
+  }
+}
+
+
+.canvas__body{
+  display: block;
+  padding:1rem 0.5rem;
+  ul{
+    list-style-type: none;
+    li{
+      padding: 0.3rem;
+    }
+  }
+}
+
+.showModal{
+  display: block;
+}
+
+@keyframes moveIn{
+  0%{
+
+  }
+
+  100%{
+
+  }
+}
+
+
+
+// media screen
+
+@media screen and (max-width:768px){
+  .modal__fade{
+   margin:0;
+  padding:0;
+  }
+  .modal__inner{
+   max-width: 700px;
+   padding: 0;
+   margin:0;
+   justify-content: space-around;
+ }
+ .modal__content{
+  display: block;
+  text-align: center;
+  max-width: 90%;
+  padding: 2rem  ;
+ }
+ img{
+  height: 20vh;
+  width: 200px;
+  }
+
+  .off-canvasModal{
+    height: 50%;
+  }
+  .canvas__head{
+    display: flex;
+    flex-direction: row;
+    .canvas__image{
+       flex:1;
+     img{
+      height: 15vh;
+      width: 140px;
+     }
+   }
+ }
+
+ .off-canvasModal{
+  width:80%;
+  left:10%;
+  }
+ 
+}
+
+
+ @media screen and (max-width:500px){
+   img{
+     height: 12rem;
+     width: 190px;
+    }
+    .canvas__head{
+      display: flex;
+      flex-direction: column;
+      .canvas__image{
+      flex:1;
+     img{
+      height: 20vh;
+      width: 140px;
+      }
+     }
+  }
+
+  .off-canvasModal{
+    width:80%;
+    left:10%;
+    height: inherit;
+  }
+ }
+
+
+ .footer{
+   padding: 4rem 2rem;
+ }
+
+
+
+
+// @media screen and (min-width:1000px){
+  
+//   .modal__content{
+   
+//    padding: 2rem 2.5rem;
+//   }
+
+//   img{
+//    height: 20vh;
+//    width: 200px;
+//   }
+
+  
+//  }
+

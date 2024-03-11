@@ -1,0 +1,36 @@
+
+
+@import "navbar";
+@import "body";
+@import "footer";
+
+$d-font : 'Dancing Script', cursive;
+$b-font :  "Raleway", Helvetica, sans-serif;
+$t-font:'EB Garamond', serif;
+$editor-font: 'Inconsolata', monospace;
+$white : white;
+$black: black;
+
+*{
+ padding:0;
+ margin: 0;
+ box-sizing: border-box;
+ 
+}
+
+
+.container{
+ padding:0;
+ margin:0;
+ width: 100%; 
+}
+
+main{
+ margin-top: 70px;
+}
+
+.active {
+ padding:1rem;
+ background-color: green;
+}
+

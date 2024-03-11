@@ -1,0 +1,59 @@
+
+
+
+.footer{
+  background-color: #333;
+  padding: 2rem 0.5rem;
+  display: flex;
+  flex-direction: row;
+  font-family: $b-font;
+
+  
+  .endpoints{
+     margin: 0 auto;
+     padding: 0.5rem;
+     color: rgb(204, 204, 204);
+    ;
+     font-weight: lighter;
+
+     h4{
+      font-size: 1.3rem;
+      font-weight: 100;
+      font-weight: lighter;
+      padding: 1.4rem 0;
+      text-transform: uppercase;
+     }
+
+     ul{
+      text-decoration: none;
+      list-style: none;
+      line-height: 1.4;
+     }
+
+     i{
+       color: rgb(230, 230, 230);
+     }
+  }
+
+  .endpoints_events li{
+    color: rgb(23, 177, 164);
+  }
+
+
+}
+
+
+@media screen and(max-width: 765px){
+ .footer{
+  flex-direction: column;
+  text-align: left;
+  .endpoints{
+   margin:0;
+   padding: 1.4rem;
+     h4{
+       padding: 0.7rem 0;
+     }
+     
+  }
+ }
+}

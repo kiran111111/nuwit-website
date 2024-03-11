@@ -1,0 +1,157 @@
+
+$d-font : 'Dancing Script', cursive;
+$b-font : 'Libre Franklin', sans-serif;
+$t-font:'EB Garamond', serif;
+$white : white;
+$black: black;
+$background:rgb(48, 48, 48);
+
+@mixin list-styles{
+ a{
+  font-weight: bold;
+  text-decoration:none;
+  transition:  all ease-in;
+  color: rgb(175, 171, 171);
+  &:hover{
+   color: white;
+  }
+  
+ }
+}
+
+.body{
+  position: relative;
+}
+
+
+.navigation{
+  width: 100%;
+  display: flex;
+  flex-direction:row;
+  background-color: $background;
+ position: fixed;
+ top:0;
+ font-family: $b-font;
+//  border-bottom:1px solid white;
+ z-index:9;
+ 
+}
+
+.logo{
+  flex: 1 0 10%;
+  h3{
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: bold;
+   font-size: 1.8rem;
+   color: white;
+   padding: 1rem;
+  }
+}
+
+.navbar{
+  flex:1 0 80%;
+ position: relative;
+  $b-font :  "Raleway", Helvetica, sans-serif;
+  ul{
+   float:right;
+   display: inline;
+    li{
+      display: inline-block;
+      text-decoration:none;
+      padding: 1rem;
+      margin: 0.35rem 0;
+      text-transform: uppercase;
+       @include list-styles;
+       a:active{
+         background-color: blue; 
+       }
+    }
+  }
+}
+
+
+
+
+.hamburger{
+ position: relative;
+ top: 1rem;
+ right: 1rem;
+ display: none;
+ cursor: pointer;
+ &:hover div{
+  width: 2.1rem;
+  height: 0.25rem;
+  background-color: white;
+  z-index: 9999;
+ 
+ }
+ 
+  div{
+    width: 2rem;
+    border-radius: 2px;
+    height: 0.23rem;
+    margin: 0.3rem;
+    background-color: white;
+ 
+  }
+
+}
+
+
+.off-canvas{
+  font-family: $b-font;
+ width: 100%;
+ position: fixed;
+top:60px;
+ margin-left:-100%;
+ background-color:$background ;
+ overflow-y: auto;
+z-index:9999;
+
+ transition: 1s all ease;
+ 
+ ul{
+  li{
+   display: block;
+   text-decoration:none;
+    padding: 0.75rem;
+    margin-left:0.5rem;
+    text-transform: uppercase;
+    @include list-styles;
+    &:hover a{  
+      color: white;
+    }
+  }
+ }
+}
+
+.show{
+ margin-left:0px;
+ animation-name: fade;
+ animation-duration: 2s;
+ transition: 1s all ease;
+}
+
+
+@media screen and (max-width:928px){
+ .navbar{
+  display: none;
+ }
+
+ .hamburger{
+  display: inline;
+ }
+
+ 
+}
+
+
+@keyframes fade {
+  from {
+    opacity: 0.5;
+  
+  }
+  to {
+    opacity: 1;
+  }
+}
